@@ -6,11 +6,12 @@ const inputSymbol = document.querySelector("#input-symbol");
 const resultSymbol = document.querySelector("#result-symbol");
 const weatherMessage = document.querySelector("#weather-message");
 const formulaText = document.querySelector("#formula-text");
+const swapBtn = document.querySelector("#swap-btn");
 
 const units = {
   celsius: {
     label: "Celsius",
-    symbol: "°C",
+    symbol: "°C", 
     toCelsius: (value) => value,
     fromCelsius: (value) => value
   },
@@ -109,6 +110,13 @@ fromUnit.addEventListener("change", updateConverter);
 toUnit.addEventListener("change", updateConverter);
 
 updateConverter();
+swapBtn.addEventListener("click", () => {
+  const tempUnit = fromUnit.value;
+
+  fromUnit.value = toUnit.value;
+  toUnit.value = tempUnit;
+
+  updateConverter();
 
 const themeButton = document.getElementById("theme-button");
 
