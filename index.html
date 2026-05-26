@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Temperaturas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="neutral">
+  <main class="app">
+    <section class="converter" aria-labelledby="page-title">
+      <div class="heading">
+        <h1 id="page-title">Conversor de temperaturas</h1>
+        <p id="weather-message" class="weather-message">Digite uma temperatura</p>
+      </div>
+
+      <div class="converter-grid">
+        <label class="temperature-field">
+          <span>Temperatura inicial</span>
+          <div class="input-line">
+            <input id="input-value" type="number" inputmode="decimal" placeholder="0" value="25">
+            <strong id="input-symbol" aria-hidden="true">°C</strong>
+          </div>
+          <select id="from-unit" aria-label="Unidade inicial">
+            <option value="celsius" selected>Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </label>
+
+        <div class="equals" aria-hidden="true">=</div>
+
+        <label class="temperature-field result-field">
+          <span>Temperatura convertida</span>
+          <div class="input-line">
+            <input id="result-value" type="text" readonly aria-label="Resultado da conversão">
+            <strong id="result-symbol" aria-hidden="true">°F</strong>
+          </div>
+          <select id="to-unit" aria-label="Unidade convertida">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit" selected>Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </label>
+      </div>
+
+      <article class="formula-box" aria-live="polite">
+        <h2>Como converter</h2>
+        <p id="formula-text"></p>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
