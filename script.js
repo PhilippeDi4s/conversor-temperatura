@@ -109,3 +109,9 @@ fromUnit.addEventListener("change", updateConverter);
 toUnit.addEventListener("change", updateConverter);
 
 updateConverter();
+
+const themeButton = document.getElementById("theme-button");
+
+themeButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
