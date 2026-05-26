@@ -232,3 +232,55 @@ input:focus {
     height: 44px;
   }
 }
+
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  display: grid;
+  gap: 12px;
+}
+
+.footer p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+#theme-button {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #17202a;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#theme-button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+body.dark-mode {
+  background: linear-gradient(125deg, #1a1a1a, #2b2b2b);
+  color: white;
+}
+
+body.dark-mode .converter {
+  background: rgba(30, 30, 30, 0.9);
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode .input-line {
+  background: #2b2b2b;
+  color: white;
+}
+
+body.dark-mode .formula-box p,
+body.dark-mode .weather-message,
+body.dark-mode .temperature-field > span {
+  color: #d1d1d1;
+}
